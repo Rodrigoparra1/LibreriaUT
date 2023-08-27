@@ -1,0 +1,31 @@
+﻿body {
+}
+.carousel-inner {
+    height: 400px;
+    width:100%;
+    overflow: hidden;
+    display: block;
+}
+
+    .carousel-inner img {
+        height: auto; /* Mantén el aspecto original de la imagen */
+        margin: auto; /* Centra la imagen horizontalmente */
+        object-fit:cover;
+        object-position: center;
+     
+    }
+.imagen {
+    height: auto; /* Mantén el aspecto original de la imagen */
+    margin: auto; /* Centra la imagen horizontalmente */
+    object-fit: cover;
+    object-position: center;
+}
+
+h2{
+    margin-top:30px;
+}
+
+
+#Categorias {
+    margin-top: 60px;
+}
