@@ -1,4 +1,6 @@
 using LibreriaUT.Data;
+using LibreriaUT.Data.Contracts;
+using LibreriaUT.Data.Services;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.EntityFrameworkCore;
@@ -9,9 +11,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 //Creanis ek servicio para el dbcontext
-builder.Services.AddDbContext<EditorialUTDbContext>(options =>
+builder.Services.AddDbContextFactory<EditorialUTDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
     );
+builder.Services.AddTransient<IAutorDataService, AutorDataService>();
 
 var app = builder.Build();
 
